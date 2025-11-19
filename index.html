@@ -18,15 +18,20 @@
       --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.4);
     }
 
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       padding: 24px;
       background: radial-gradient(circle at top, #181b28 0%, #050608 60%);
-      font-family: "Poppins", sans-serif;
+      font-family: "Poppins", system-ui, sans-serif;
       color: var(--text-main);
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       min-height: 100vh;
     }
 
@@ -40,19 +45,23 @@
       backdrop-filter: blur(12px);
       box-shadow: var(--shadow-soft);
       position: relative;
+      overflow: hidden;
     }
 
-    /* Top-right logo */
+    /* ⭐ CMU Logo Top-Right (smaller + cleaner) */
     .cmu-logo {
       position: absolute;
-      top: 25px;
-      right: 25px;
-      width: 160px;
+      top: 18px;
+      right: 18px;
+      width: 95px;
+      opacity: 0.92;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.45));
     }
 
     header {
       text-align: center;
       margin-bottom: 45px;
+      padding-top: 20px;
     }
 
     h1 {
@@ -65,14 +74,14 @@
       color: var(--text-subtle);
       margin-top: 8px;
       font-size: 1rem;
-      line-height: 1.5;
+      line-height: 1.55;
     }
 
     .team-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 28px;
-      margin-top: 40px;
+      margin-top: 35px;
     }
 
     @media (min-width: 700px) {
@@ -157,8 +166,8 @@
     }
 
     .link-pill:hover {
-      background: rgba(255, 79, 79, 0.1);
-      border-color: rgba(255, 79, 79, 0.7);
+      background: rgba(255, 79, 79, 0.12);
+      border-color: rgba(255, 79, 79, 0.65);
     }
 
     .link-icon {
@@ -173,28 +182,25 @@
     }
   </style>
 </head>
-<body>
 
+<body>
   <main class="page">
 
-    <!-- CMU Logo (top-right) -->
+    <!-- ⭐ CMU Logo Top-Right -->
     <img src="images/cmu-logo.png" class="cmu-logo" alt="Carnegie Mellon University Logo">
 
     <header>
-      <!-- Title -->
       <h1>The Product Managers Behind the Magic</h1>
 
-      <!-- Updated Subtitle -->
       <p class="subtitle">
         Master of Science in Product Management <br>
         Carnegie Mellon University
       </p>
     </header>
 
-    <!-- TEAM -->
     <section class="team-grid">
 
-      <!-- Ankit -->
+      <!-- ⭐ Ankit -->
       <article class="member-card">
         <div class="avatar-wrapper">
           <div class="avatar" style="background-image: url('images/ankit.png');"></div>
@@ -207,12 +213,12 @@
         <p class="member-bio">
           Ankit is a product manager with a background in AI and imaging systems. He focuses on transforming complex trend signals into clear product opportunities for Honda.
         </p>
-        <a class="link-pill" href="https://www.linkedin.com/in/shukla-ankit/" target="_blank" rel="noopener noreferrer">
+        <a class="link-pill" href="https://www.linkedin.com/in/shukla-ankit/" target="_blank">
           <span class="link-icon">in</span> LinkedIn
         </a>
       </article>
 
-      <!-- Kritika -->
+      <!-- ⭐ Kritika -->
       <article class="member-card">
         <div class="avatar-wrapper">
           <div class="avatar" style="background-image: url('images/kritika.png');"></div>
@@ -225,12 +231,12 @@
         <p class="member-bio">
           Kritika brings strength in customer research and strategy. She specializes in structuring ambiguous problem spaces into clear, actionable product pathways.
         </p>
-        <a class="link-pill" href="https://www.linkedin.com/in/kritikarastogi93/" target="_blank" rel="noopener noreferrer">
+        <a class="link-pill" href="https://www.linkedin.com/in/kritikarastogi93/" target="_blank">
           <span class="link-icon">in</span> LinkedIn
         </a>
       </article>
 
-      <!-- Himakar -->
+      <!-- ⭐ Himakar -->
       <article class="member-card">
         <div class="avatar-wrapper">
           <div class="avatar" style="background-image: url('images/himakar.png');"></div>
@@ -243,7 +249,7 @@
         <p class="member-bio">
           Himakar is an engineer-turned-product manager who excels at balancing technical feasibility with business impact. He focuses on building scalable workflows for trend intelligence.
         </p>
-        <a class="link-pill" href="https://www.linkedin.com/in/himakar-yv/" target="_blank" rel="noopener noreferrer">
+        <a class="link-pill" href="https://www.linkedin.com/in/himakar-yv/" target="_blank">
           <span class="link-icon">in</span> LinkedIn
         </a>
       </article>
@@ -251,6 +257,5 @@
     </section>
 
   </main>
-
 </body>
 </html>
