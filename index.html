@@ -4,33 +4,25 @@
   <meta charset="UTF-8" />
   <title>Honda Capstone Team | CMU MSPM</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Honda Capstone Team from Carnegie Mellon University – Master of Science in Product Management." />
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <style>
     :root {
-      --bg: #050608;
       --accent: #ff4f4f;
       --text-main: #f5f5f7;
       --text-subtle: #a8b0c3;
-      --border-soft: rgba(255, 255, 255, 0.08);
+      --border-soft: rgba(255, 255, 255, 0.1);
       --radius-xl: 24px;
       --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.4);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
     }
 
     body {
       margin: 0;
       padding: 24px;
       background: radial-gradient(circle at top, #181b28 0%, #050608 60%);
-      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: "Poppins", sans-serif;
       color: var(--text-main);
       display: flex;
       align-items: center;
@@ -47,17 +39,20 @@
       background: rgba(255, 255, 255, 0.02);
       backdrop-filter: blur(12px);
       box-shadow: var(--shadow-soft);
+      position: relative;
     }
 
-    @media (max-width: 600px) {
-      .page {
-        padding: 24px;
-      }
+    /* Top-right logo */
+    .cmu-logo {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      width: 160px;
     }
 
     header {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 45px;
     }
 
     h1 {
@@ -68,33 +63,9 @@
 
     .subtitle {
       color: var(--text-subtle);
+      margin-top: 8px;
       font-size: 1rem;
-      margin-top: 6px;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
       line-height: 1.5;
-    }
-
-    .tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.85rem;
-      padding: 6px 12px;
-      border-radius: 999px;
-      border: 1px solid var(--border-soft);
-      background: rgba(255, 255, 255, 0.05);
-      margin-bottom: 18px;
-      color: var(--text-subtle);
-    }
-
-    .tag-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: radial-gradient(circle, #fff, var(--accent));
-      box-shadow: 0 0 10px rgba(255, 79, 79, 0.8);
     }
 
     .team-grid {
@@ -112,7 +83,7 @@
 
     .member-card {
       background: rgba(255, 255, 255, 0.03);
-      border-radius: var(--radius-xl);
+      border-radius: 24px;
       border: 1px solid var(--border-soft);
       padding: 22px;
       text-align: center;
@@ -121,7 +92,7 @@
 
     .member-card:hover {
       transform: translateY(-4px);
-      border-color: rgba(255, 255, 255, 0.18);
+      border-color: rgba(255, 255, 255, 0.2);
       box-shadow: var(--shadow-soft);
     }
 
@@ -206,24 +177,17 @@
 
   <main class="page">
 
+    <!-- CMU Logo (top-right) -->
+    <img src="images/cmu-logo.png" class="cmu-logo" alt="Carnegie Mellon University Logo">
+
     <header>
-      <!-- CMU LOGO -->
-      <img src="images/cmu-logo.png"
-           alt="Carnegie Mellon University Logo"
-           style="width: 180px; margin-bottom: 20px;">
-
-      <!-- Tag -->
-      <div class="tag">
-        <span class="tag-dot"></span>
-        Honda Capstone · CMU MSPM
-      </div>
-
-      <!-- Headline -->
+      <!-- Title -->
       <h1>The Product Managers Behind the Magic</h1>
 
-      <!-- Subtitle -->
+      <!-- Updated Subtitle -->
       <p class="subtitle">
-        Master of Science in Product Management, Carnegie Mellon University
+        Master of Science in Product Management <br>
+        Carnegie Mellon University
       </p>
     </header>
 
